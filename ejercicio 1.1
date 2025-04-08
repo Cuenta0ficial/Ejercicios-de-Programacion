@@ -1,11 +1,10 @@
 #include <stdio.h>
 //1.1. Se ingresan la cantidad de horas trabajadas y el valor por hora de un empleado. Determinar el sueldo.
-
 int main()
 {
 	int horas, VPH=10000;
-	printf("Ingrese la cantidad de horas diarias: ");
-	scanf_s("%d", &horas);
-	printf("su sueldo diario es de: $ %d , mensual de $ %d y anual de $ %d", horas * VPH, horas * VPH * 22, horas * VPH * 260);
+	printf("Ingrese la cantidad de horas diarias: "); //imprime una oracion
+	scanf_s("%d", &horas);							  //lee el valor de horas desde una direccion de memoria
+	printf("su sueldo diario es de: $ %d , mensual de $ %d y anual de $ %d", horas * VPH, horas * VPH * 22, horas * VPH * 260); //imprime el resultado de la multiplicacion de horas por el valor por hora
 	return 0;
 }
