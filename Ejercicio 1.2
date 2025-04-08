@@ -1,0 +1,19 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.2. Se ingresan las notas de dos evaluaciones de un alumno. Determinar la nota promedio. 
+int main()
+{
+	float nota1, nota2;										//declaracion de variables flotantes
+	printf("Ingrese la nota de la primera evaluacion: ");   //imprimimos mensaje
+	scanf_s("%f", &nota1);                                  //lee el valor de la nota 1 desde una direccion de memoria
+	printf("Ingrese la nota de la segunda evaluacion: ");   //imprimimos mensaje
+	scanf_s("%f", &nota2);								    //lee el valor de la nota 2 desde una direccion de memoria
+	float promedio = +(nota1 + nota2) / 2;					//calculo del promedio
+	printf("El promedio es: %.2f\n", promedio);             //imprimimos el promedio
+	if (promedio >= 7) {									//Si el promedio es mayor o igual a 7
+		printf("El alumno esta aprobado");                  //imprimimos mensaje
+	}
+	else {                                                  //si no
+		printf("El alumno esta desaprobado");               //imprimimos otro mensaje
+	}
+	return 0;                                               //fin del programa
