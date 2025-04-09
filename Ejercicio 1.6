@@ -1,0 +1,28 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.6. El precio para un vuelo es de $8800 en clase turista y se aplica un incremento del 30% en primera clase.Se ingresan la cantidad de pasajes vendidos de clase turista y de primera clase.Obtener la recaudación total del vuelo.
+int main()
+{
+	float precio = 8800;                                                                          //precio del pasaje
+	float turista, primera;                                                                       //cantidad de pasajes vendidos
+	printf("Ingrese la cantidad de pasajes vendidos de clase turista: ");                         //cantidad de pasajes turista vendidos
+	scanf_s("%f", &turista);                                                                      //cantidad de pasajes turista vendidos
+	while (turista < 0) {                                                                         //validacion de la cantidad de pasajes turista vendidos
+		printf("Error, ingrese nuevamente la cantidad de pasajes vendidos de clase turista: ");   //se pide ingresar nuevamente
+		scanf_s("%f", &turista);                                                                  //cantidad de pasajes turista vendidos
+	}                      
+	printf("Ingrese la cantidad de pasajes vendidos de primera clase: ");                         //cantidad de pasajes de primera clase vendidos
+	scanf_s("%f", &primera);                                                                      //cantidad de pasajes de primera clase vendidos
+	while (primera < 0) {                                                                         //validacion de la cantidad de pasajes de primera clase vendidos
+		printf("Error, ingrese nuevamente la cantidad de pasajes vendidos de primera clase: ");   //se pide ingresar nuevamente
+		scanf_s("%f", &primera);                                                                  //cantidad de pasajes de primera clase vendidos
+	}
+	if (primera == 0 and turista == 0) {                                                          //si no se ha vendido ningun pasaje
+		printf("No se ha vendido ningun pasaje, cancelar vuelo");                                 //se cancela el vuelo
+		return 1;                                                                                 //fin del programa si no hay ventas
+	}
+	printf("La recaudacion total de la clase turista es de: $%.2f", turista * precio);            //recaudacion total de turista
+	printf("\nLa recaudacion total de la clase primera es de: $%.2f", primera * precio * 1.3);    //recaudacion total de primera clase
+	float Total = (turista * precio) + (primera * precio * 1.3);                                  //variable de la recaudacion total
+	printf("\nLa recaudacion total del vuelo es de: $%.2f", Total);                               //recaudacion total
+	return 0;                                                                                     //fin del programa si hay ventas
