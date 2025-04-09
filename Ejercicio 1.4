@@ -1,0 +1,22 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.4. Confeccionar un programa que ingrese una medida en ‘pies’ y la exhiba convertida a yardas, pulgadas, cms.y mts.NOTA: 1 pie = 12 pulgadas; 1 yarda = 3 pies; 1 pulgada = 2, 54 cms.
+int main()
+{ 
+	float pies;                                                    //se declara la variable base
+	float yardas, pulgadas, centimetros, metros;                   //se declaran las variables de conversion
+	printf("Ingrese la medida en pies: ");                         //se solicita la medida en pies
+	scanf_s("%f", &pies);                                          //se lee la medida en pies
+	while (pies < 0) {                                             //se valida que la medida no sea negativa
+		printf("Medida imposible, vuelva a ingresar la medida: "); //se solicita nuevamente la medida
+		scanf_s("%f", &pies);                                      //se lee la medida en pies
+	} 
+	yardas = pies / 3;                                             //se calcula la medida en yardas
+	pulgadas = pies * 12;                                          //se calcula la medida en pulgadas
+	centimetros = pulgadas * 2.54;                                 //se calcula la medida en centimetros
+	metros = centimetros / 100;                                    //se calcula la medida en metros
+	printf("La medida en yardas es: %.2f\n", yardas);              //se muestra la medida en yardas
+	printf("La medida en pulgadas es: %.2f\n", pulgadas);          //se muestra la medida en pulgadas
+	printf("La medida en centimetros es: %.2f\n", centimetros);    //se muestra la medida en centimetros
+	printf("La medida en metros es: %.2f\n", metros);              //se muestra la medida en metros
+	return 0;                                                      //fin del programa
