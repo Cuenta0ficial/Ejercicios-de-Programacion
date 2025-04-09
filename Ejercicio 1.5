@@ -1,0 +1,20 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.5. Conociendo la cantidad de tarros de pintura que existe en un depósito de una pinturería y sabiendo que el 50 % son tarros de 1Lt, el 30 % tarros de 4Lts.y el resto tarros de 20Lts.Determinar la cantidad de tarros de 1Lt., 4Lts.Y 20 Lts.
+int main()
+{ 
+	float tarros;                                                           //declaracion de la variable base
+	float tarros1lt, tarros4lt, tarros20lt;                                 //declaracion de las variables secundarias
+	printf("Ingrese la cantidad de tarrros de pintura: ");                  //se piden los datos
+	scanf_s("%f", &tarros);                                                 //se escanea la variable base
+	while (tarros < 0) {                                                    //validacion de la variable base
+		printf("Ingrese nuevamente la cantidad de tarros: ");               //se pide nuevamente el dato
+		scanf_s("%f", &tarros);                                             //se escanea la variable base
+	}
+	tarros1lt = tarros * 0.5;                                               //calculo de la cantidad de tarros de 1lt
+	tarros4lt = tarros * 0.3;                                               //calculo de la cantidad de tarros de 4lt
+	tarros20lt = tarros * 0.2;                                              //calculo de la cantidad de tarros de 20lt
+	printf("La cantidad de tarros de 1 litro es de: %.0f\n", tarros1lt);    //imprime la cantidad de tarros de 1lt
+	printf("La cantidad de tarros de 4 litros es de: %.0f\n", tarros4lt);   //imprime la cantidad de tarros de 4lt
+	printf("La cantidad de tarros de 20 litros es de: %.0f\n", tarros20lt); //imprime la cantidad de tarros de 20lt
+	return 0;                                                               //fin del programa
