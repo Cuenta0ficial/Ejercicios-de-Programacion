@@ -1,0 +1,20 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.10. Confeccionar un programa que solicite el ingreso del valor del radio (r) de un círculo y con dicho valor calcule la superficie del círculo, la longitud de la circunferencia(perímetro) y el volumen de la esfera.𝑆𝑢𝑝𝑒𝑟𝑓𝑖𝑐𝑖𝑒 = 𝜋𝑟 2 𝑃𝑒𝑟í𝑚𝑒𝑡𝑟𝑜 = 2𝜋𝑟 𝑉𝑜𝑙ú𝑚𝑒𝑛 = 4 3 𝜋𝑟 3
+int main()
+{
+	int radio;                                               //variable base 
+	int superficie, perimetro, volumen;                      //variables secundarias
+	printf("Ingrese el valor del radio: ");                  //se pide el valor del radio
+	scanf_s("%d", &radio);                                   //se guarda el valor del radio
+	while (radio <= 0) {                                     //se valida el radio
+		printf("Ingrese nuevamente el radio: ");             //se pide el valor del radio
+		scanf_s("%d", &radio);                               //se guarda el valor del radio
+	} 
+	superficie = 3.14 * radio * radio;                       //se calcula la superficie
+	perimetro = 2 * 3.14 * radio;                            //se calcula el perimetro
+	volumen = (4 / 3) * 3.14 * radio * radio * radio;        //se calcula el volumen
+	printf("La superficie del circulo es: %d\n", superficie);//se imprime la superficie
+	printf("El perimetro del circulo es : %d\n", perimetro); //se imprime el perimetro
+	printf("El volumen de la esfera es: %d\n", volumen);     //se imprime el volumen
+	return 0;                                                //fin del programa
