@@ -1,0 +1,22 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.8. Se ingresa un número entero que representa una fecha con formato (ddmmaa). Se pide transformarlo a un número con formato(aammdd).
+int main()
+{
+	int fecha;                                                           //variable para almacenar la fecha
+	int dia, mes, año;                                                   //variables para almacenar el dia, mes y año
+	printf("Ingrese la fecha (dia / mes / anio): ");                     //se solicita la fecha en formato dia/mes/año
+	scanf_s("%d", &fecha);                                               //leer la fecha
+	dia = fecha / 10000;                                                 //separar el dia
+	mes = (fecha / 100) % 100;                                           //separar el mes
+	año = fecha % 100;                                                   //separar el año
+	while (dia < 1 or dia>31 or mes < 1 or mes>12) {                     //validar la fecha
+		printf("Error, ingrese nuevamente la fecha (dia / mes /anio): ");//se vuelve a pedir la fecha
+		scanf_s("%d", &fecha);                                           //leer la fecha
+		dia = fecha / 10000;                                             //separar el dia
+		mes = (fecha / 100) % 100;                                       //separar el mes
+		año = fecha % 100;                                               //separar el año
+	}
+	printf("La fecha es: %02d/%02d/%02d", año, mes, dia);                //se imprime la fecha en formato año/mes/dia
+	return 0;                                                            //fin del programa si hay ventas
+}
