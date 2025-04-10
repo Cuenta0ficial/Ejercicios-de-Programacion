@@ -1,0 +1,21 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.7. Se ingresa un número entero de 3 cifras. Descomponerlo en unidad, decena y centena. 
+int main()
+{
+	int num;                                                 //variable base
+	int unidad, decena, centena;                             //variables secundarias
+	printf("Ingrese un numero de tres cifras: ");            //se pide el numero
+	scanf_s("%d", &num);                                     //se escanea el numero
+	while (num < 100 or num > 999) {                         //si el numero no es de tres cifras
+		printf("Error, ingrese un numero de tres cifras: "); //se pide el numero
+		scanf_s("%d", &num);                                 //se escanea el numero
+	}
+	unidad = num % 10;                                       //se obtiene la unidad
+	decena = (num / 10) % 10;                                //se obtiene la decena
+	centena = (num / 100) % 10;                              //se obtiene la centena
+	printf("\nUnidad: %.0d", unidad);                        //se imprime la unidad
+	printf("\nDecena: %.0d", decena);                        //se imprime la decena
+	printf("\nCentena: %.0d", centena);                      //se imprime la centena
+	return 0;                                                //fin del programa si hay ventas
+}
