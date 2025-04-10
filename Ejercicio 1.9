@@ -1,0 +1,21 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.9. Confeccionar un programa que ingrese un valor expresado en Kibibyte (KiB)1 y lo informe expresado en : TiB, GiB, MiB, con leyendas aclaratorias. (1MiB = 1024 KiB; 1GiB = 1024 MiB; 1TiB = 1024 GiB)
+
+int main()
+{
+	int VKiB;                                              //valor en Kibibyte
+	int VTiB, VGiB, VMiB;                                  //valor en Tebibyte, Gibibyte y Mebibyte
+	printf("Ingrese el valor en Kibibyte (KiB); ");        //se pide el valor en Kibibyte
+	scanf_s("%d", &VKiB);                                  //se guarda el valor en la variable VKiB
+	while (VKiB < 0) {                                     //se valida el valor ingresado
+		printf("Error, ingrese un valor positivo: ");      //se pide un valor positivo
+		scanf_s("%d", &VKiB);                              //se guarda el nuevo valor en la variable VKiB
+	} 
+	VMiB = VKiB / 1024;                                    //se convierte el valor de KiB a MiB
+	VGiB = VMiB / 1024;                                    //se convierte el valor de MiB a GiB
+	VTiB = VGiB / 1024;                                    //se convierte el valor de GiB a TiB
+	printf("El valor en mibibyte (MiB) es: %d\n", VMiB);   //se imprime el valor en MiB
+	printf("El valor en gibibyte (GiB) es: %d\n", VGiB);   //se imprime el valor en GiB
+	printf("El valor en tebibyte (TiB) es: %d\n", VTiB);   //se imprime el valor en TiB
+}                                                          //fin del programa
