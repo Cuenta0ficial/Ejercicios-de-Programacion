@@ -1,0 +1,21 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.11.Una pizzería vende empanadas por unidad o por docena, la docena cuesta $300 pero si se compra individualmente se cobra $30 la unidad.Si se compran más empanadas que no se agrupen en docenas las adicionales se cobran como por unidad.Indicar el precio total a abonar.
+int main()
+{
+	int empanadas;
+	printf("Ingrese la cantidad de empanadas vendidas: ");
+	scanf_s("%d", &empanadas);
+	while (empanadas < 0)
+	{
+		printf("Error, ingrese una cantidad valida: ");
+		scanf_s("%d", &empanadas);
+	}
+	int docenas = (empanadas / 12)*300;
+	int individuales = (empanadas % 12) * 30;
+	printf("Docenas totales: %d.0\n", empanadas / 12);
+	printf("Empanadas individuales: %d.0\n", empanadas % 12);
+	int total = docenas + individuales;
+	printf("El total es; $%d.0\n", total);
+	return 0;
+}
