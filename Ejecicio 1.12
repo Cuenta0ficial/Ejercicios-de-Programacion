@@ -1,0 +1,34 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.12. Una farmacia vende algunos artículos sin descuento y a otros con descuento del 20%. Confeccionar un programa que recibiendo el precio original y un código que indica si es o no con descuento, informe el precio final(0 no aplica el descuento y 1 aplica el descuento).
+int main()
+{
+	int descuento;                                                                            //declara la variable que indica si el producto tiene descuento
+	float precio1 = 100, precio2 = 80, precio3 = 120;                                         //declara los precios de los productos
+	float producto1, producto2, producto3;                                                    //declara los productos
+	float precioFinal;                                                                        //declara el precio final
+	printf("Ingrese la cantidad de productos 1 que quiere comprar : ");                       //pregunta cuantos productos 1 son compados
+	scanf_s("%f", &producto1);                                                                //lee la cantidad de productos 1
+	printf("¿Tiene descuento?: ");                                                            //pregunta si tiene descuento
+	scanf_s("%d", &descuento);                                                                //lee si tiene descuento
+	if (descuento == 1) {                                                                     //si tiene descuento
+		precio1 = precio1 * 0.8;                                                              //aplica el descuento
+	}
+	printf("Ingrese la cantidad de productos 2 que quiere comprar: ");                        //pregunta cuantos productos 2 son comprados
+	scanf_s("%f", &producto2);                                                                //lee la cantidad de productos 2
+	printf("¿Tiene descuento?: ");                                                            //pregunta si tiene descuento
+	scanf_s("%d", &descuento);                                                                //lee si tiene descuento
+	if (descuento == 1) {                                                                     //si tiene descuento
+		precio2 = precio2 * 0.8;                                                              //aplica el descuento
+	} 
+	printf("Ingrese la cantidad de productos 3 que quiere comprar: ");                        //pregunta cuantos productos 3 son comprados
+	scanf_s("%f", &producto3);                                                                //lee la cantidad de productos 3
+	printf("¿Tiene descuento?: ");                                                            //pregunta si tiene descuento
+	scanf_s("%d", &descuento);                                                                //lee si tiene descuento
+	if (descuento == 1) {                                                                     //si tiene descuento
+		precio3 = precio3 * 0.8;                                                              //aplica el descuento
+	}
+	precioFinal = (producto1 * precio1) + (producto2 * precio2) + (producto3 * precio3);      //calcula el precio final
+	printf("El precio final es: %.2f\n", precioFinal);                                        //imprime el precio final
+	return 0;                                                                                 //fin del programa
+} 
