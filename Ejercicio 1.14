@@ -1,0 +1,23 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.14. Se ingresan 3 números distintos. Determinar el mayor. 
+int main()
+{
+	int numero1, numero2, numero3;                        //declaracion de variables
+	printf("Ingrese el primer numero: ");                 //se pide el primer numero
+	scanf_s("%d", &numero1);                              //se ingresa el primer numero
+	printf("Ingrese el segundo numero: ");                //se pide el segundo numero
+	scanf_s("%d", &numero2);                              //se ingresa el segundo numero
+	printf("Ingrese el tercer numero: ");                 //se pide el tercer numero
+	scanf_s("%d", &numero3);                              //se ingresa el tercer numero
+	if (numero1 > numero2 && numero1 > numero3) {         //si el primer numero es mayor que el segundo y el tercero
+		printf("El numero mayor es: %d", numero1);          //se indica que el mayor es el primero
+	}
+	else if (numero2 > numero3) {                         //si no, si el segundo numero es mayor que el tercero (y por consecuencia del primero)
+		printf("El numero mayor es: %d", numero2);          //se indica que el mayor es el segundo
+	}	
+	else {                                                //si no, el tercero es mayor que el primero y el segundo
+		printf("El numero mayor es: %d", numero3);          //se indica que el mayor es el tercero
+	}
+	return 0;                                             //fin del programa
+} 
