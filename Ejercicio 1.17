@@ -1,0 +1,29 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.17. Ingresar 3 valores reales y: 
+// a.Si los dos primeros son mayores al tercero informar “MAYORES AL TERCERO”.
+// b.Si los tres son iguales informar “TRES IGUALES.
+// c.Si alguno de los dos primeros es menor al tercero informar “ALGUNO ES MENOR”.
+int main()
+{
+	int numero1, numero2, numero3;                 //declaracion de variables
+	printf("Ingrese el primer numero: ");          //se pide el primer numero
+	scanf_s("%d", &numero1);                       //se ingresa el primer numero
+	printf("Ingrese el segundo numero: ");         //se pide el segundo numero
+	scanf_s("%d", &numero2);                       //se ingresa el segundo numero
+	printf("Ingrese el tercer numero: ");          //se pide el tercer numero
+	scanf_s("%d", &numero3);                       //se ingresa el tercer numero
+	if (numero1 > numero3 and numero2 > numero3) { //a.Si los dos primeros son mayores al tercero 
+		printf("MAYORES AL TERCERO");                //informar “MAYORES AL TERCERO”.
+		return 1;                                    //fin del codigo si se cumple el punto a
+	}
+	if (numero1 == numero2 == numero3) {           //b.Si los tres son iguales
+		printf("TRES IGUALES");                      //informar “TRES IGUALES.
+		return 2;                                    //fin del codigo si se cumple el punto b
+	}
+	if (numero1 < numero3 or numero2 < numero3) {  //c.Si alguno de los dos primeros es menor al tercero
+		printf("ALGUNO ES MENOR");                   //informar “ALGUNO ES MENOR”.
+		return 3;                                    //fin del codigo si se cumple el punto c
+	}
+
+}
