@@ -1,0 +1,49 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.18. Se ingresan 3 números enteros. Informarlos en orden creciente.  
+int main() {
+	int numero1, numero2, numero3;                                                   //se denominan las variables para cada numero
+	int menor, medio, mayor;                                                         //se denominan las variables para el menor, medio y mayor
+	printf("Ingrese el primer numero: ");                                            //se pide el primer numero
+	scanf_s("%d", &numero1);                                                         //se ingresa el primer numero
+	printf("Ingrese el segundo numero: ");                                           //se pide el segundo numero
+	scanf_s("%d", &numero2);                                                         //se ingresa el segundo numero
+	printf("Ingrese el tercer numero: ");                                            //se pide el tercer numero
+	scanf_s("%d", &numero3);                                                         //se ingresa el tercer numero
+	if (numero1 > numero2 and numero1 > numero3) {                                   //si el primer numero es mayor que el segundo y el tercero
+		mayor = numero1;                                                               //el numero mayor es el primero
+		if (numero2 > numero3) {                                                       //si el segundo numero es mayor que el tercero
+			medio = numero2;                                                             //el numero del medio es el segundo
+			menor = numero3;                                                             //el numero menor es el tercero
+		}         
+		else {                                                                         //si el tercer numero es mayor que el segundo
+			medio = numero3;                                                             //el numero del medio es el tercero
+			menor = numero2;                                                             //el numero menor es el segundo
+		}
+		printf("Los numeros de menor a mayor son: %d, %d, %d", menor, medio, mayor);   //se muestra el orden de los numeros
+	}
+	if (numero2 > numero1 and numero2 > numero3) {                                   //si el segundo numero es mayor que el primero y el tercero
+		mayor = numero2;                                                               //el numero mayor es el segundo
+		if (numero1 > numero3) {                                                       //si el primer numero es mayor que el tercero
+			medio = numero1;                                                             //el numero del medio es el primero
+			menor = numero3;                                                             //el numero menor es el tercero
+		}                                                                            
+		else {                                                                         //si el tercer numero es mayor que el primero
+			medio = numero3;                                                             //el numero del medio es el tercero
+			menor = numero1;                                                             //el numero menor es el primero
+		}
+		printf("Los numeros de menor a mayor son: %d, %d, %d", menor, medio, mayor);   //se muestra el orden de los numeros
+	}
+	if (numero3 > numero1 and numero3 > numero2) {                                   //si el tercer numero es mayor que el primero y el segundo
+		mayor = numero3;                                                               //el numero mayor es el tercero
+		if (numero1 > numero2) {                                                       //si el primer numero es mayor que el segundo
+			medio = numero1;                                                             //el numero del medio es el primero
+			menor = numero2;                                                             //el numero menor es el segundo
+		}
+		else {                                                                         //si el segundo numero es mayor que el primero
+			medio = numero2;                                                             //el numero del medio es el segundo
+			menor = numero1;                                                             //el numero menor es el primero
+		}
+		printf("Los numeros de menor a mayor son: %d, %d, %d", menor, medio, mayor);   //se muestra el orden de los numeros
+	}	                 
+	return 0;                                                                        //fin del programa
