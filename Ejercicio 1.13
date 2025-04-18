@@ -1,0 +1,32 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.13. Confeccionar un programa que solicite el ingreso de un número entero positivo de 4 cifras y pueda calcular e informar la suma de sus dígitos hasta llegar a una sola cifra.Ej:2561 → 5.
+int main()
+{
+	int num;                                                       //variable para el numero de cuatro cifras
+	int dijito1, dijito2, dijito3, dijito4;                        //variables para los dijitos
+	int total1;                                                    //variable para la suma de los dijitos
+	int total;                                                     //variable para la suma total
+	printf("Ingrese un numero de cuatro cifras:");                 //se pide el numero de cuatro cifras
+	scanf_s("%d", &num);                                           //se escanea el numero
+	while (num < 1000 or num > 9999) {                             //se valida el numero
+		printf("Error, Ingrese un numero de cuatro cifras: ");       //se pide el numero de cuatro cifras
+		scanf_s("%d", &num);                                         //se escanea el numero
+	}
+	dijito1 = num / 1000;                                          //se obtiene el primer dijito
+	dijito2 = (num / 100) % 10;                                    //se obtiene el segundo dijito
+	dijito3 = (num) % 100 / 10;                                    //se obtiene el tercer dijito
+	dijito4 = num % 10;                                            //se obtiene el cuarto dijito
+	total1 = dijito1 + dijito2 + dijito3 + dijito4;                //se suma los dijitos
+	printf("La suma de los dijitos es de: %d\n", total1);          //se imprime la suma de los dijitos
+	if (total1 > 9) {                                              //si el resultado final es mayor a 9 (tiene mas de un dijito)
+		dijito1 = total1 / 10;                                       //se obtiene el primer dijito
+		dijito2 = total1 % 10;                                       //se obtiene el segundo dijito
+		total = dijito1 + dijito2;                                   //se obtiene el total a partir de la suma de los dos dijitos restantes
+	}                                                              
+	else {                                                         //si no
+		total = total1;                                              //el total final es el mismo que el total incial
+	}
+	printf("La suma total de los dijitos es de: %d", total);       //se imprime el total final
+	return 0;                                                      //fin del programa
+} 
