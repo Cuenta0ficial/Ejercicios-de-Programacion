@@ -1,0 +1,29 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.16. Confeccionar un programa que pueda determinar de 3 números enteros que se ingresan si alguno de ellos es igual a la suma de los otros dos.
+int main()
+{
+	int numero1, numero2, numero3;                                            //declaracion de variables
+	printf("Ingrese el primer numero: ");                                     //se pide el primer numero
+	scanf_s("%d", &numero1);                                                  //se ingresa el primer numero
+	printf("Ingrese el segundo numero: ");                                    //se pide el segundo numero
+	scanf_s("%d", &numero2);                                                  //se ingresa el segundo numero
+	printf("Ingrese el tercer numero: ");                                     //se pide el tercer numero
+	scanf_s("%d", &numero3);                                                  //se ingresa el tercer numero
+	if (numero1 == numero2 + numero3) {                                       //si el primer numero es igual a la suma de los otros dos
+		printf("El primer numero es igual a la suma de los otros");             //se muestra que el primero es igual a la suma de los otros dos
+		return 1;                                                               //fin del programa si el primero es igual a la suma de los otros dos
+	}
+	if (numero2 == numero1 + numero3) {                                       //si el segundo numero es igual a la suma de los otros dos
+		printf("El segundo numero es igual a la suma de los otros");            //se muestra que el segundo es igual a la suma de los otros dos
+		return 2;                                                               //fin del programa si el segundo es igual a la suma de los otros dos
+	}
+	if (numero3 == numero1 + numero2) {                                       //si el tercer numero es igual a la suma de los otros dos
+		printf("El tercer numero es igual a la suma de los otros");             //se muestra que el tercero es igual a la suma de los otros dos
+		return 3;                                                               //fin del programa si el tercero es igual a la suma de los otros dos
+	}
+	else {                                                                    //si ninguno de los numeros es igual a la suma de los otros dos
+		printf("Ninguno de los numeros es igual a la suma de los otros dos");   //se muestra que ninguno de los numeros es igual a la suma de los otros dos
+		return 0;                                                               //fin del programa si ninguno de los numeros es igual a la suma de los otros dos
+	}
+}
