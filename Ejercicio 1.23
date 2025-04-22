@@ -1,0 +1,25 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.23.Confeccionar un programa que permita convertir grados sexagesimales a radianes y viceversa, según el valor de un código que se ingresa junto al valor.Si código = 1 se ingresan grados, si es 2 se ingresan radianes. 1 𝑟𝑎𝑑𝑖𝑎𝑛 = 180 𝜋 𝑔𝑟𝑎𝑑𝑜𝑠 1 𝑔𝑟𝑎𝑑𝑜 = 𝜋 180 𝑟𝑎𝑑𝑖𝑎𝑛𝑒�
+int main() {
+	float grados, radianes;                                     //se declaran las variables de cada posible valor
+	int codigo;                                                 //se declara la variable que indica el tipo de conversion
+	printf("Posibles conversiones: \n");                        //se expresan las posibles conversiones
+	printf("0. Grados a Radianes\n");                           //se muestra la opcion de conversion
+	printf("1. Radianes a Grados\n");                           //se muestra la opcion de conversion
+	printf("Que conversion desea realizar?: ");                 //se pide el tipo de conversion
+	scanf_s("%d", &codigo);                                     //se ingresa el tipo de conversion
+	printf("Conversion elegida: %d\n", codigo);                 //se muestra el tipo de conversion elegido
+	if (codigo == 0) {                                          //si el codigo es 0 se realiza la conversion de grados a radianes
+		printf("Ingrese el valor en grados: ");                 //se pide el valor en grados
+		scanf_s("%f", &grados);                                 //se ingresa el valor en grados
+		radianes = (grados * (3.14)) / 180;                     //se calcula el valor en radianes 
+		printf("El valor en radianes es: %.2f", radianes);      //se muestra el valor en radianes
+	}  
+	if (codigo == 1) {                                          //si el codigo es 1 se realiza la conversion de radianes a grados
+		printf("Ingrese el valor en radianes: ");               //se pide el valor en radianes
+		scanf_s("%f", &radianes);                               //se ingresa el valor en radianes
+		grados = (radianes * 180) / (3.14);                     //se calcula el valor en grados
+		printf("El valor en grados es: %.2f", grados);          //se muestra el valor en grados
+	}
+	return 0;                                                   //fin del programa
