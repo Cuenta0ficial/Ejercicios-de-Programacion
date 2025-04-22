@@ -1,0 +1,17 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.22. Confeccionar un programa que permita ingresar un carácter alfanumérico y determine e informe si lo ingresado corresponde a una vocal, con el mensaje “VOCAL”.y su correspondiente valor numérico en ASCII.
+int main() {
+	char letra;                                                                                  //se crea una variable letra de tipo char
+	printf("Ingrese la letra alfanumerica: ");                                                   //se pide la letra
+	scanf_s("%c", &letra, 1);                                                                    //se ingresa la unica letra 
+	if (letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u') {          //si la letra es una vocal
+		printf("VOCAL\n");                                                                   //se muestra que es una vocal
+		printf("Su valor en ASCII es: %d", letra);                                           //se muestra el valor en ASCII
+	}
+	else {                                                                                       //si no es una vocal
+		printf("No es una vocal\n");                                                         //se muestra que no es una vocal
+		printf("Su valor en ASCII es: %d", letra);                                           //se muestra el valor en ASCII
+	}
+	return 0;                                                                              //fin del programa
+}
