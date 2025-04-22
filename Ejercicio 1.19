@@ -1,0 +1,28 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.19. Confeccionar un programa que permita ingresar 4 números enteros, de a uno por vez y determine el menor valor y su número de orden.Informe los valores ingresados e identifique al menor con mensaje aclaratorio.
+int main() {
+	int num[4];                                                                      //se crea un vector con 4 espacios para cada uno de los numeros a ingresar
+	for (int i = 0; i < 4; i++) {                                                    //se inicia un ciclo for para ingresar los 4 numeros
+		printf("Ingrese el numero %d: ", i + 1);                                       //se piden los numeros
+		scanf_s("%d", &num[i]);                                                        //se ingresan los numeros
+	}
+	int menor = num[0];                                                              //se crea una variable para denominar el menor numero desde la direccion de memoria del vector
+	int nOrden = 0;                                                                  //se crea una variable para denominar el orden del menor numero
+	for (int i = 1; i < 4; i++) {                                                    //se inicia un ciclo for para recorrer el vector
+		if (num[i] < menor) {                                                          //se inicia una condicion para determinar si el numero ingresado es menor al ultimo menor
+			menor = num[i];                                                              //se denomina el nuevo menor
+			nOrden = i;                                                                  //se denomina la posicion del menor
+		}
+	}
+	printf("El menor valor es %d y su numero de orden es %d\n", menor, nOrden + 1);  //se muestra el menor numero y su posicion
+	printf("Los valores ingresados son: ");                                          //se muestra el mensaje de los valores ingresados
+	for (int i = 0; i < 4; i++) {                                                    //se inicia un ciclo for para recorrer el vector
+		if (i == nOrden) {                                                             //si el numero es el menor
+			printf("[%d] ", num[i]);                                                     //poner el numero entre corchetes para destacarlo
+		}                            
+		else {                                                                         //si no es el menor
+			printf("%d ", num[i]);                                                       //mostrar el numero normalmente
+		}
+	}
+	return 0;                                                                        //fin del programa
