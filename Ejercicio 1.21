@@ -1,0 +1,19 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.21. Realizar un programa que ingrese dos números e indique si el primer número es divisible por el segundo.
+int main() {
+	int num1, num2;                                                                        //declaracion de variables
+	int resto;                                                                             //se declara la variable del resto
+	printf("Ingrese el primer numero (dividendo): ");                                      //se pide el primer numero
+	scanf_s("%d", &num1);                                                                  //se ingresa el primer numero
+	printf("Ingrese el segundo numero (divisor): ");                                       //se pide el segundo numero
+	scanf_s("%d", &num2);                                                                  //se ingresa el segundo numero
+	resto = num1 % num2;                                                                   //se calcula el resto de la division
+	if ((resto) == 0) {                                                                    //si el resto es 0, entonces el primer numero es divisible por el segundo
+		printf("El primer numero es divisible por el segundo (El resto es 0)");            //se muestra el resultado
+	}                                                                                      
+	else {                                                                                 //si el resto no es 0, entonces el primer numero no es divisible por el segundo
+		printf("El primer numero no es divisible por el segundo (El resto es %d)", resto); //se muestra el resultado
+	}
+	return 0;                                                                              //fin del programa
+}
