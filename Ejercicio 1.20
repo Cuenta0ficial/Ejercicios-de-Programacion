@@ -1,0 +1,31 @@
+#include <stdio.h>			        	//libreria
+#include <stdlib.h>				        //libreria
+//1.20. Confeccionar un programa que solicite e ingrese 3 valores reales positivos, mayores que cero y determine e informe si forman o no triángulo.Para ello utilizar el teorema de la desigualdad del triángulo que establece que la suma de las longitudes de cualesquiera de dos lados de un triángulo es mayor que la longitud del tercer lado.
+int main() {
+	float la, lb, lc;                                             //se declaran las variables para cada uno de los lados del triangulo
+	printf("Ingrese el primer numero: ");                         //se pide el primer numero
+	scanf_s("%d", &la);                                           //se ingresa el primer numero
+	while (la <= 0) {                                             //se valida que el numero sea mayor a 0
+		printf("Error, ingrese un numero entero positivo: ");       //se pide el primer numero nuevamente
+		scanf_s("%d", &la);                                         //se ingresa el primer numero nuevamente
+	}
+	printf("Ingrese el segundo numero: ");                        //se pide el segundo numero
+	scanf_s("%d", &lb);                                           //se ingresa el segundo numero
+	while (lb <= 0) {                                             //se valida que el numero sea mayor a 0
+		printf("Error, ingrese un numero entero positivo: ");       //se pide el segundo numero nuevamente
+		scanf_s("%d", &lb);                                         //se ingresa el segundo numero nuevamente
+	}
+	printf("Ingrese el tercer numero: ");                         //se pide el tercer numero
+	scanf_s("%d", &lc);                                           //se ingresa el tercer numero
+	while (lc <= 0) {                                             //se valida que el numero sea mayor a 0
+		printf("Error, ingrese un numero entero positivo: ");       //se pide el tercer numero nuevamente
+		scanf_s("%d", &lc);                                         //se ingresa el tercer numero nuevamente
+	}  
+	if (la + lb > lc and la + lc > lb and lb + lc > la) {         //si la suma de dos lados es mayor que el otro
+		printf("Es un triangulo");                                  //se indica que es un triangulo
+	}
+	else {                                                        //si no
+		printf("No es un triangulo");                               //se indica que no es un triangulo
+	}
+	return 0;                                                     //fin del programa
+}
